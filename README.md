@@ -16,8 +16,8 @@ Es una plataforma web de ecommerce especializada en moda, desarrollada con Djang
 ✅ Navegación clara con menús de inicio, tienda, sobre nosotros y contacto.  
 ✅ Footer informativo con enlaces a redes sociales y marcas destacadas.  
 ✅ Diseño moderno y responsive para dispositivos móviles y escritorio.
-✅ Carrito de compras
-✅ Login de Usuario
+✅ Carrito de compras.
+✅ Login de Usuario.
 
 ----
 
