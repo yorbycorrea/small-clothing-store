@@ -19,7 +19,7 @@ Es una plataforma web de ecommerce especializada en moda, desarrollada con Djang
 ✅ Carrito de compras.
 ✅ Login de Usuario.
 
-----
+---
 
 ## 🛠️ Tecnologías utilizadas
 
