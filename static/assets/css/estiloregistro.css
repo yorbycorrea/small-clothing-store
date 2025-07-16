@@ -1,0 +1,33 @@
+/* estiloregistro.css */
+
+/* Estilos para el formulario de registro */
+.form-fields {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los campos del formulario */
+.form-fields input[type="text"],
+.form-fields input[type="password"] {
+    width: calc(100% - 30px); /* Ajusta el ancho del input según el padding y borde */
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para el botón */
+.form-fields button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+}

@@ -1,0 +1,118 @@
+
+
+{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<br><br/>
+<div class="container py-5">
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="h2 pb-4">Categorias</h1>
+            <ul class="list-unstyled templatemo-accordion">
+                <li class="pb-3">
+                    <li class="pb-3">
+                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                            Precio
+                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+                        </a>
+                        <ul class="collapse show list-unstyled pl-3">
+                            <li>
+                                <label for="precioMinimo">S/0 a S/50:</label>
+                                <input type="number" id="precioMinimo" class="form-control" placeholder="Ingrese hasta S/50">
+                            </li>
+                            <li>
+                                <label for="precioMaximo">S/50 a S/100:</label>
+                                <input type="number" id="precioMaximo" class="form-control" placeholder="Ingrese hasta S/100">
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="pb-3">
+                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                            Venta
+                            <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                        </a>
+                        <ul id="collapseTwo" class="collapse list-unstyled pl-3">
+                            <li><a class="text-decoration-none" href="{% url 'category' 'Hombre' %}">Hombre</a></li>
+                            <li><a class="text-decoration-none" href="{% url 'category' 'Mujer' %}">Mujer</a></li>
+                        </ul>
+                    </li>
+                <li class="pb-3">
+                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        Producto
+                        <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                    </a>
+                    <ul id="collapseThree" class="collapse list-unstyled pl-3">
+                        <li><a class="text-decoration-none" href="#">Blusas</a></li>
+                        <li><a class="text-decoration-none" href="#">Poleras</a></li>
+                        <li><a class="text-decoration-none" href="Pantalones.html">Pantalones</a></li>
+                        <li><a class="text-decoration-none" href="#">Vestidos</a></li>
+                        <li><a class="text-decoration-none" href="#">Conjuntos</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="{{ product.image.url }}">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="{% url "product" product.id %}"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="shop-single.html" class="h3 text-decoration-none">{{ product.name }}</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>M/L/X</li>
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">{{ product.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                        </div><div class="row">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+</div>
+<style>
+    .product-wap .card-img {
+        width: 100%;
+        height: 250px; /* Establece la altura deseada para las imágenes */
+        object-fit: cover;
+    }
+</style>
+
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+{% endblock %}s

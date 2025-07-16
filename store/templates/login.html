@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <br><br/>
+    <h1 class="center">LOGIN</h1>
+    <br><br/>
+    <form method='POST' action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name="username" placeholder="Ingresar tu Usuario">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <link rel="stylesheet" href="{% static 'assets/css/estiloinicio.css' %}">
+{% endblock %}

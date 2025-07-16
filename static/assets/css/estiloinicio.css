@@ -1,0 +1,42 @@
+/* estiloinicio.css */
+
+.center {
+    text-align: center;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido del formulario */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left; /* Alinea el texto a la izquierda dentro de los campos */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilos para el texto de ayuda */
+.form-text {
+    font-size: 12px;
+    color: #6c757d;
+}
